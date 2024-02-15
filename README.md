@@ -39,7 +39,9 @@ All of the setup is required to run.
 - copy .env.example to .env `cp .env.example .env`
 
 ### setup mysql db
-- run `pnpm seed`
+- run `pnpm prisma migrate dev --name initial --create-only`
+- run `pnpm prisma migrate deploy`
+- run `pnpm prisma db seed`
 - this might take a few mins so move on
 
 note: this will be missing voicelines, but contain npcs
